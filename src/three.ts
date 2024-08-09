@@ -1,11 +1,16 @@
-import * as Three from "three";
-import gsap from "gsap";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import GUI from "lil-gui";
-import { enableGui, resize, toggleFullScreen } from "./utils";
-import { texture } from "./threejs-template/textures";
-import { materials } from "./threejs-template/metarials";
+// import * as Three from "three";
+// import gsap from "gsap";
+// import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+// import GUI from "lil-gui";
+// import { enableGui, resize, toggleFullScreen } from "./utils";
+// import { texture } from "./threejs-template/textures";
+// import { materials } from "./threejs-template/metarials";
+// import { ThreeDText } from "./threejs-template/3dText";
+
 import { ThreeDText } from "./threejs-template/3dText";
+import { light } from "./threejs-template/Light";
+import { materials } from "./threejs-template/metarials";
+import { shadows } from "./threejs-template/Shadows";
 
 // export const setupThree = (canvas: HTMLCanvasElement) => {
 //   // Scene---
@@ -69,5 +74,7 @@ import { ThreeDText } from "./threejs-template/3dText";
 export const setupThree = (canvas: HTMLCanvasElement) => {
   // texture(canvas)
   // materials(canvas)
-  ThreeDText(canvas);
+  // ThreeDText(canvas);
+  // light(canvas);
+  shadows(canvas)
 };

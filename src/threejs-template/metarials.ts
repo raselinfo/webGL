@@ -113,26 +113,26 @@ export const materials = (canvas: HTMLCanvasElement) => {
   const material = new Three.MeshPhysicalMaterial();
   material.metalness = 0;
   material.roughness = 0;
-  // material.map = doorColorTexture;
-  // material.aoMap = doorAmbientOcclusionTexture;
-  // material.aoMapIntensity = 1;
-  // material.displacementMap = doorHeightTexture;
-  // material.displacementScale = 0.1;
-  // material.metalnessMap = doorMetalnessTexture;
-  // material.roughnessMap = doorRoughnessTexture;
-  // material.normalMap = doorNormalTexture;
-  // material.normalScale.set(3, 3);
-  // material.transparent = true;
-  // material.alphaMap = doorAlphaTexture;
+  material.map = doorColorTexture;
+  material.aoMap = doorAmbientOcclusionTexture;
+  material.aoMapIntensity = 1;
+  material.displacementMap = doorHeightTexture;
+  material.displacementScale = 0.1;
+  material.metalnessMap = doorMetalnessTexture;
+  material.roughnessMap = doorRoughnessTexture;
+  material.normalMap = doorNormalTexture;
+  material.normalScale.set(3, 3);
+  material.transparent = true;
+  material.alphaMap = doorAlphaTexture;
 
   // Clearcoat
-  // material.clearcoat=1
-  // material.clearcoatRoughness=0
+  material.clearcoat=1
+  material.clearcoatRoughness=0
 
   // Sheen
-  // material.sheen = 1;
-  // material.sheenRoughness = 0.25;
-  // material.sheenColor.set("blue");
+  material.sheen = 1;
+  material.sheenRoughness = 0.25;
+  material.sheenColor.set("blue");
 
   // Iridesence
   // material.iridescence = 1;
@@ -140,9 +140,9 @@ export const materials = (canvas: HTMLCanvasElement) => {
   // material.iridescenceThicknessRange = [100, 800];
 
   // Transmission
-  material.transmission = 1;
-  material.ior = 1.5;
-  material.thickness = 0.5;
+  // material.transmission = 1;
+  // material.ior = 1.5;
+  // material.thickness = 0.5;
 
   // GUI---------
   gui.add(material, "metalness").min(0).max(1).step(0.0001);
